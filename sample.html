@@ -1,8 +1,23 @@
 <div>
-    <form >
-    <input type = "text" placeholder="enter Name"/>
-    <input type = "password" placeholder="enter Password"/>
-    <input type="submit" value="Submit"/>
+    <form method="POST" >
+    <input type = "text" id="username" placeholder="enter Name"/>
+    <input type = "password" id="password" placeholder="enter Password"/>
+    <input type="submit" value="Submit" onclick="login()"/>
 </form>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function login() {
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let cred={'name':username,'pwd':password};
+    const url = 'http://localhost:8080/login'
+    $.post(url,cred,(res)=>{
+        alert(JSON.stringify(cred));
+        console.log("cred"+cred);
+    })
+}
+
+</script>
 
