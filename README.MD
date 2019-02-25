@@ -10,6 +10,12 @@ npm install --save body-parser for parsing the json string
 
 npm install --save routes
 
+npm install --save mongoose
+
+npm install --save request  ########// to get the data from the node server api data
+
+
+
 ###############mongo DB ##############################################
 
 download the mongodb for your device .msi file and install and go to the below path 
@@ -43,10 +49,13 @@ db.collectionname.insertMany([{},{},{}])
 
 db.collectionname.remove({});
 
-db.collectionname.update({"email":"dinesh.k1@on.com"},{$set:{"name":"Dinesh.K"}});
+db.collectionname.update({"email":"dinesh.k1@synechron.com"},{$set:{"name":"Dinesh.K"}});
 
 ###########to retrive one column in a json############
 
 db.collectionname.find({},{name:1,_id:-1});
 
 db.collectionname.find({},{name:1,_id:0});
+
+
+

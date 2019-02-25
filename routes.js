@@ -1,6 +1,9 @@
 const express = require('express');
 var router = express.Router();
 
+var Request = require('request');
+
+
 var obj={'name':'boopathi','age':28};
 
 router.get('/',(req,res)=>{
@@ -8,7 +11,10 @@ return res.sendFile("/templates/sample.html", { root: __dirname });
 });
 
 router.get('/getJson',(req,res)=>{
-    res.json(obj);
+    Request.get('http://192.168.1.142:5000/mystd',function(err, req,body){
+        console.log(body)
+res.send(body);
+    })
     });
 
 router.get('/getExample/:name/:office', (req,res) => {
