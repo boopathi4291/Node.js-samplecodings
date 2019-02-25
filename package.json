@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "routes": "^2.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
