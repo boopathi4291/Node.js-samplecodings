@@ -49,7 +49,7 @@ db.collectionname.insertMany([{},{},{}])
 
 db.collectionname.remove({});
 
-db.collectionname.update({"email":"dinesh.k1@synechron.com"},{$set:{"name":"Dinesh.K"}});
+db.collectionname.update({"email":"dinesh.k1@schron.com"},{$set:{"name":"Dinesh.K"}});
 
 ###########to retrive one column in a json############
 
